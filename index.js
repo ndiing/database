@@ -130,7 +130,21 @@ class Database {
         origin = origin.replace(/[^\w\(\)\_\-\,\.]/g, "-");
         const file = `${userDataDir}/${origin}/${profileDirectory}.json`;
         if (!this.pools[file]) {
-            this.pools[file] = new Database(file);
+            const database = new Database(file);
+            this.pools[file] = {
+                get localStorage() {
+                    return database.localStorage;
+                },
+                get cookieStore() {
+                    return database.cookieStore;
+                },
+                get cookie() {
+                    return database.cookieStore.cookie;
+                },
+                set cookie(value) {
+                    database.cookieStore.cookie = value;
+                },
+            };
         }
         return this.pools[file];
     }
@@ -138,6 +152,9 @@ class Database {
     constructor(file = "") {
         this.file = file;
         this.data = this.read(this.file, {});
+        this.data = {};
+        this.data.localStorage = new Storage(this.data?.localStorage ?? {});
+        this.data.cookieStore = new CookieStore(this.data?.cookieStore ?? {});
         return new Proxy(this.data, this);
     }
 
@@ -192,5 +209,3 @@ Database.Storage = Storage;
 Database.CookieStore = CookieStore;
 
 module.exports = Database;
-
-// @ndiinginc/database

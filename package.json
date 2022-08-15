@@ -1,0 +1,27 @@
+{
+  "name": "@ndiinginc/database",
+  "version": "1.0.0",
+  "description": "database",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndiing/database.git"
+  },
+  "keywords": [
+    "nodejs",
+    "json",
+    "file",
+    "database",
+    "cookieStore",
+    "localStorage"
+  ],
+  "author": "ndiing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndiing/database/issues"
+  },
+  "homepage": "https://github.com/ndiing/database#readme"
+}
