@@ -11,21 +11,31 @@ npm install @ndiinginc/database
 ### Usage
 
 ```js
-const Database = require("@ndiinginc/database");
 
-// Get data from pool
+// Create database pool
 const pool = Database.get("https://google.com");
 
-// Create on localStorage
+// Using localStorage
 pool.localStorage.setItem("name", "value");
+console.log(pool.localStorage.getItem("name")); // value
 
-// Create on cookieStore
-pool.cookieStore.set({ name: "name", value: "value" });
+// Using cookieStore
+pool.cookieStore.set("name", "value");
+console.log(pool.cookieStore.set("name")); // value
 
-// Create cookie, this part usage in @ndiinginc/fetch
-pool.cookie = "name=value";
-pool.cookie = ["name=value", "name=value"];
+// or
+pool.cookie = 'name=value'
+console.log(pool.cookie)
 
-// ./data/https---google.com/default.json
-// {"localStorage":{"name":"value"},"cookieStore":{"name":{"name":"name","value":"value"}}}
+// Session storage never saved into file
+
+// Using sessionStorage
+pool.sessionStorage.setItem("name", "value");
+console.log(pool.sessionStorage.getItem("name")); // value
+
+// ...Restart
+
+console.log(pool.localStorage.getItem("name")); // value
+console.log(pool.sessionStorage.getItem("name")); // undefined
+
 ```
