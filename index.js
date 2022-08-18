@@ -165,12 +165,13 @@ class Database {
     constructor(file = "") {
         this.file = file;
         this.data = this.read(this.file, {});
+        this.data={
+            // watch
+            localStorage: new Storage(this.data?.localStorage ?? {}),
+            cookieStore: new CookieStore(this.data?.cookieStore ?? {}),
+        }
         return new Proxy(
-            {
-                // watch
-                localStorage: new Storage(this.data?.localStorage ?? {}),
-                cookieStore: new CookieStore(this.data?.cookieStore ?? {}),
-            },
+            this.data,
             this
         );
     }
