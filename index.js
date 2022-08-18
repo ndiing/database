@@ -92,7 +92,7 @@ class CookieStore {
                 }
             }
 
-            if (cookie.name) {
+            if (cookie.value) {
                 this.set(cookie);
             } else {
                 this.delete(cookie);
