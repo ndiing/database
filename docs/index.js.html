@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="CookieStore.html">CookieStore</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Database.html">Database</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Storage.html">Storage</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="CookieStore.html">CookieStore</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="CookieStore.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="CookieStore.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="CookieStore.html#getAll">getAll</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="CookieStore.html#set">set</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Database.html">Database</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Database.html#.get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Database.html#deleteProperty">deleteProperty</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Database.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Database.html#read">read</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Database.html#set">set</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Database.html#write">write</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Storage.html">Storage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Storage.html#clear">clear</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Storage.html#getItem">getItem</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Storage.html#key">key</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Storage.html#removeItem">removeItem</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Storage.html#setItem">setItem</a></span></li>
 </nav>
 
 <div id="main">
@@ -46,34 +46,63 @@ const path = require("path");
  * 
  */
 class Storage {
+
+    /**
+    */
     get length() {
         return Object.getOwnPropertyNames(this).length;
     }
 
+    /**
+     * 
+     * @param {*} init 
+     */
     constructor(init = {}) {
         for (const name in init) {
             this.setItem(name, init[name]);
         }
     }
 
+    /**
+     * 
+     */
     clear() {
         for (const name of Object.getOwnPropertyNames(this)) {
             this.removeItem(name);
         }
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @returns {Any} 
+     */
     getItem(name) {
         return this[name];
     }
-
+    
+    /**
+     * 
+     * @param {*} index 
+     * @returns {Any} 
+     */
     key(index) {
         return Object.getOwnPropertyNames(this)[index];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     */
     removeItem(name) {
         delete this[name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @param {*} value 
+     */
     setItem(name, value) {
         this[name] = value;
     }
@@ -98,6 +127,10 @@ function cookie(name, value) {
  * 
  */
 class CookieStore {
+
+    /**
+     * 
+    */
     get cookie() {
         let array = [];
 
@@ -107,6 +140,9 @@ class CookieStore {
         return array.join("; ");
     }
 
+    /**
+     * 
+    */
     set cookie(value) {
         const regexp = /(Expires|Max-Age|Domain|Path|Secure|HttpOnly|SameSite)/i;
 
@@ -133,7 +169,7 @@ class CookieStore {
                 }
             }
 
-            if (cookie.name) {
+            if (cookie.value) {
                 this.set(cookie);
             } else {
                 this.delete(cookie);
@@ -141,6 +177,10 @@ class CookieStore {
         }
     }
 
+    /**
+     * 
+     * @param {*} init 
+     */
     constructor(init = {}) {
         for (const name in init) {
             // this.set(name,init[name])
@@ -148,21 +188,40 @@ class CookieStore {
         }
     }
 
+    /**
+     * 
+     * @param {*} name 
+     */
     delete(name) {
         let object = cookie(name);
         delete this[object.name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @returns {Any}
+     */
     get(name) {
         let object = cookie(name);
         return this[object.name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @returns {Any}
+     */
     getAll(name) {
         let object = cookie(name);
         return this[object.name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @param {*} value 
+     */
     set(name, value) {
         let object = cookie(name, value);
         this[object.name] = object;
@@ -170,11 +229,20 @@ class CookieStore {
 }
 
 /**
- * not suitable for big data, because this library using basic fs read/write and JSON.stringify/parse method for saving JSON to file
+ * 
  */
 class Database {
+    /**
+     * 
+    */
     static pools = [];
 
+    /**
+     * 
+     * @param {*} origin 
+     * @param {*} options 
+     * @returns {Any}
+     */
     static get(origin = "", options = {}) {
         const { userDataDir = "./data", profileDirectory = "default" } = options;
         origin = origin.replace(/[^\w\(\)\_\-\,\.]/g, "-");
@@ -203,24 +271,43 @@ class Database {
         return this.pools[file];
     }
 
+    /**
+     * 
+     * @param {*} file 
+     * @returns {Any}
+     */
     constructor(file = "") {
         this.file = file;
         this.data = this.read(this.file, {});
+        this.data={
+            // watch
+            localStorage: new Storage(this.data?.localStorage ?? {}),
+            cookieStore: new CookieStore(this.data?.cookieStore ?? {}),
+        }
         return new Proxy(
-            {
-                // watch
-                localStorage: new Storage(this.data?.localStorage ?? {}),
-                cookieStore: new CookieStore(this.data?.cookieStore ?? {}),
-            },
+            this.data,
             this
         );
     }
 
+    /**
+     * 
+     * @param {*} target 
+     * @param {*} name 
+     * @returns {Any}
+     */
     get(target, name) {
         if (typeof target[name] == "object" &amp;&amp; target[name] !== null &amp;&amp; !Array.isArray(target[name])) return new Proxy(target[name], this);
         return target[name];
     }
 
+    /**
+     * 
+     * @param {*} target 
+     * @param {*} name 
+     * @param {*} value 
+     * @returns {Any}
+     */
     set(target, name, value) {
         const oldValue = target[name];
 
@@ -232,6 +319,12 @@ class Database {
         return true;
     }
 
+    /**
+     * 
+     * @param {*} target 
+     * @param {*} name 
+     * @returns {Any}
+     */
     deleteProperty(target, name) {
         const oldValue = target[name];
 
@@ -243,6 +336,12 @@ class Database {
         return true;
     }
 
+    /**
+     * 
+     * @param {*} file 
+     * @param {*} data 
+     * @returns {Any}
+     */
     read(file = "", data = {}) {
         try {
             data = JSON.parse(fs.readFileSync(file));
@@ -252,6 +351,11 @@ class Database {
         return data;
     }
 
+    /**
+     * 
+     * @param {*} file 
+     * @param {*} data 
+     */
     write(file = "", data = {}) {
         const dir = path.dirname(file);
         try {
@@ -279,7 +383,7 @@ module.exports = Database;
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Wed Aug 17 2022 22:18:14 GMT+0700 (Western Indonesia Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Sat Aug 20 2022 17:07:49 GMT+0700 (Western Indonesia Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

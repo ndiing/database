@@ -5,34 +5,63 @@ const path = require("path");
  * 
  */
 class Storage {
+
+    /**
+    */
     get length() {
         return Object.getOwnPropertyNames(this).length;
     }
 
+    /**
+     * 
+     * @param {*} init 
+     */
     constructor(init = {}) {
         for (const name in init) {
             this.setItem(name, init[name]);
         }
     }
 
+    /**
+     * 
+     */
     clear() {
         for (const name of Object.getOwnPropertyNames(this)) {
             this.removeItem(name);
         }
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @returns {Any} 
+     */
     getItem(name) {
         return this[name];
     }
-
+    
+    /**
+     * 
+     * @param {*} index 
+     * @returns {Any} 
+     */
     key(index) {
         return Object.getOwnPropertyNames(this)[index];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     */
     removeItem(name) {
         delete this[name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @param {*} value 
+     */
     setItem(name, value) {
         this[name] = value;
     }
@@ -57,6 +86,10 @@ function cookie(name, value) {
  * 
  */
 class CookieStore {
+
+    /**
+     * 
+    */
     get cookie() {
         let array = [];
 
@@ -66,6 +99,9 @@ class CookieStore {
         return array.join("; ");
     }
 
+    /**
+     * 
+    */
     set cookie(value) {
         const regexp = /(Expires|Max-Age|Domain|Path|Secure|HttpOnly|SameSite)/i;
 
@@ -100,6 +136,10 @@ class CookieStore {
         }
     }
 
+    /**
+     * 
+     * @param {*} init 
+     */
     constructor(init = {}) {
         for (const name in init) {
             // this.set(name,init[name])
@@ -107,21 +147,40 @@ class CookieStore {
         }
     }
 
+    /**
+     * 
+     * @param {*} name 
+     */
     delete(name) {
         let object = cookie(name);
         delete this[object.name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @returns {Any}
+     */
     get(name) {
         let object = cookie(name);
         return this[object.name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @returns {Any}
+     */
     getAll(name) {
         let object = cookie(name);
         return this[object.name];
     }
 
+    /**
+     * 
+     * @param {*} name 
+     * @param {*} value 
+     */
     set(name, value) {
         let object = cookie(name, value);
         this[object.name] = object;
@@ -129,11 +188,20 @@ class CookieStore {
 }
 
 /**
- * not suitable for big data, because this library using basic fs read/write and JSON.stringify/parse method for saving JSON to file
+ * 
  */
 class Database {
+    /**
+     * 
+    */
     static pools = [];
 
+    /**
+     * 
+     * @param {*} origin 
+     * @param {*} options 
+     * @returns {Any}
+     */
     static get(origin = "", options = {}) {
         const { userDataDir = "./data", profileDirectory = "default" } = options;
         origin = origin.replace(/[^\w\(\)\_\-\,\.]/g, "-");
@@ -162,6 +230,11 @@ class Database {
         return this.pools[file];
     }
 
+    /**
+     * 
+     * @param {*} file 
+     * @returns {Any}
+     */
     constructor(file = "") {
         this.file = file;
         this.data = this.read(this.file, {});
@@ -176,11 +249,24 @@ class Database {
         );
     }
 
+    /**
+     * 
+     * @param {*} target 
+     * @param {*} name 
+     * @returns {Any}
+     */
     get(target, name) {
         if (typeof target[name] == "object" && target[name] !== null && !Array.isArray(target[name])) return new Proxy(target[name], this);
         return target[name];
     }
 
+    /**
+     * 
+     * @param {*} target 
+     * @param {*} name 
+     * @param {*} value 
+     * @returns {Any}
+     */
     set(target, name, value) {
         const oldValue = target[name];
 
@@ -192,6 +278,12 @@ class Database {
         return true;
     }
 
+    /**
+     * 
+     * @param {*} target 
+     * @param {*} name 
+     * @returns {Any}
+     */
     deleteProperty(target, name) {
         const oldValue = target[name];
 
@@ -203,6 +295,12 @@ class Database {
         return true;
     }
 
+    /**
+     * 
+     * @param {*} file 
+     * @param {*} data 
+     * @returns {Any}
+     */
     read(file = "", data = {}) {
         try {
             data = JSON.parse(fs.readFileSync(file));
@@ -212,6 +310,11 @@ class Database {
         return data;
     }
 
+    /**
+     * 
+     * @param {*} file 
+     * @param {*} data 
+     */
     write(file = "", data = {}) {
         const dir = path.dirname(file);
         try {
