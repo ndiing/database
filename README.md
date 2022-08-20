@@ -1,41 +1,63 @@
-# [database](https://ndiing.github.io/database/)
+# Storage
 
-database
+## [Methods]()
 
-### Install
+[`Storage.length()`]()
 
-```
-npm install @ndiinginc/database
-```
+[`Storage.constructor()`]()
 
-### Usage
+[`Storage.clear()`]()
 
-```js
+[`Storage.getItem()`]()
 
-// Create database pool
-const pool = Database.get("https://google.com");
+[`Storage.key()`]()
 
-// Using localStorage
-pool.localStorage.setItem("name", "value");
-console.log(pool.localStorage.getItem("name")); // value
+[`Storage.removeItem()`]()
 
-// Using cookieStore
-pool.cookieStore.set("name", "value");
-console.log(pool.cookieStore.set("name")); // value
+[`Storage.setItem()`]()
 
-// or
-pool.cookie = 'name=value'
-console.log(pool.cookie)
+# CookieStore
 
-// Session storage never saved into file
+## [Methods]()
 
-// Using sessionStorage
-pool.sessionStorage.setItem("name", "value");
-console.log(pool.sessionStorage.getItem("name")); // value
+[`CookieStore.cookie()`]()
 
-// ...Restart
+[`CookieStore.cookie()`]()
 
-console.log(pool.localStorage.getItem("name")); // value
-console.log(pool.sessionStorage.getItem("name")); // undefined
+[`CookieStore.constructor()`]()
 
-```
+[`CookieStore.delete()`]()
+
+[`CookieStore.get()`]()
+
+[`CookieStore.getAll()`]()
+
+[`CookieStore.set()`]()
+
+# Database
+
+## [Properties]()
+
+[`Database.pools`]()
+
+## [Methods]()
+
+[`Database.get()`]()
+
+[`Database.constructor()`]()
+
+[`Database.get()`]()
+
+[`Database.set()`]()
+
+[`Database.deleteProperty()`]()
+
+[`Database.read()`]()
+
+[`Database.write()`]()
+
+# Global
+
+## [See also]()
+
+-   See also
