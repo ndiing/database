@@ -1,10 +1,12 @@
 # Storage
 
+## [Properties]()
+
+[`Storage.length`]()
+
+[`Storage.[undefined]`]()
+
 ## [Methods]()
-
-[`Storage.length()`]()
-
-[`Storage.constructor()`]()
 
 [`Storage.clear()`]()
 
@@ -18,13 +20,15 @@
 
 # CookieStore
 
+## [Properties]()
+
+[`CookieStore.cookie`]()
+
+[`CookieStore.cookie`]()
+
+[`CookieStore.[undefined]`]()
+
 ## [Methods]()
-
-[`CookieStore.cookie()`]()
-
-[`CookieStore.cookie()`]()
-
-[`CookieStore.constructor()`]()
 
 [`CookieStore.delete()`]()
 
@@ -40,11 +44,21 @@
 
 [`Database.pools`]()
 
+[`Database.pools[undefined]`]()
+
+[`Database.file`]()
+
+[`Database.data`]()
+
+[`Database.data`]()
+
+## [Static properties]()
+
+[`Database.Storage`]()
+
+[`Database.CookieStore`]()
+
 ## [Methods]()
-
-[`Database.get()`]()
-
-[`Database.constructor()`]()
 
 [`Database.get()`]()
 
@@ -56,8 +70,16 @@
 
 [`Database.write()`]()
 
+## [Static methods]()
+
+[`Database.get()`]()
+
 # Global
+
+## [Methods]()
+
+[`cookie()`]()
 
 ## [See also]()
 
--   See also
+-   [`link`]()
