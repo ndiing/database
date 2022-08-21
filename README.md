@@ -1,261 +1,322 @@
-## Classes
 
-<dl>
-<dt><a href="#Storage">Storage</a></dt>
-<dd></dd>
-<dt><a href="#CookieStore">CookieStore</a></dt>
-<dd></dd>
-<dt><a href="#Database">Database</a></dt>
-<dd></dd>
-</dl>
+# length
 
-<a name="Storage"></a>
 
-## Storage
-**Kind**: global class  
 
-* [Storage](#Storage)
-    * [new Storage(init)](#new_Storage_new)
-    * [.length](#Storage+length)
-    * [.clear()](#Storage+clear)
-    * [.getItem(name)](#Storage+getItem) ⇒ <code>Array</code>
-    * [.key(index)](#Storage+key) ⇒ <code>Array</code>
-    * [.removeItem(name)](#Storage+removeItem)
-    * [.setItem(name, value)](#Storage+setItem)
 
-<a name="new_Storage_new"></a>
 
-### new Storage(init)
+# Storage
 
-| Param | Type |
-| --- | --- |
-| init | <code>Object</code> | 
 
-<a name="Storage+length"></a>
 
-### storage.length
-**Kind**: instance property of [<code>Storage</code>](#Storage)  
-<a name="Storage+clear"></a>
 
-### storage.clear()
+
+## [Methods]()
+
+<!-- _Methods._ -->
+
+
+### Storage#clear()
+
 Clear all data
 
-**Kind**: instance method of [<code>Storage</code>](#Storage)  
-<a name="Storage+getItem"></a>
+#### [Syntax]()
 
-### storage.getItem(name) ⇒ <code>Array</code>
+    clear()
+
+##### [Parameters]()
+
+name|type|defaultvalue
+---|---|---
+
+##### [Return value]()
+
+
+### Storage#getItem()
+
 Get item by name
 
-**Kind**: instance method of [<code>Storage</code>](#Storage)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| name | <code>String</code> | 
+    getItem(name)
 
-<a name="Storage+key"></a>
+##### [Parameters]()
 
-### storage.key(index) ⇒ <code>Array</code>
+name|type|defaultvalue
+---|---|---
+name|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### Storage#key()
+
 Get name by index
 
-**Kind**: instance method of [<code>Storage</code>](#Storage)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| index | <code>String</code> | 
+    key(index)
 
-<a name="Storage+removeItem"></a>
+##### [Parameters]()
 
-### storage.removeItem(name)
+name|type|defaultvalue
+---|---|---
+index|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### Storage#removeItem()
+
 Remove item by name
 
-**Kind**: instance method of [<code>Storage</code>](#Storage)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| name | <code>String</code> | 
+    removeItem(name)
 
-<a name="Storage+setItem"></a>
+##### [Parameters]()
 
-### storage.setItem(name, value)
+name|type|defaultvalue
+---|---|---
+name|`String`|
+
+##### [Return value]()
+
+
+### Storage#setItem()
+
 Set item
 
-**Kind**: instance method of [<code>Storage</code>](#Storage)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| name | <code>String</code> | 
-| value | <code>String</code> | 
+    setItem(name,value)
 
-<a name="CookieStore"></a>
+##### [Parameters]()
 
-## CookieStore
-**Kind**: global class  
+name|type|defaultvalue
+---|---|---
+name|`String`|
+value|`String`|
 
-* [CookieStore](#CookieStore)
-    * [new CookieStore(init)](#new_CookieStore_new)
-    * [.cookie](#CookieStore+cookie)
-    * [.cookie](#CookieStore+cookie)
-    * [.delete(name)](#CookieStore+delete)
-    * [.get(name)](#CookieStore+get) ⇒ <code>Array</code>
-    * [.getAll(name)](#CookieStore+getAll) ⇒ <code>Array</code>
-    * [.set(name, value)](#CookieStore+set)
+##### [Return value]()
 
-<a name="new_CookieStore_new"></a>
 
-### new CookieStore(init)
+# cookie
+
+Get cookie string
+
+
+
+# cookie
+
+Set/Parse cookie
+
+
+
+# CookieStore
+
 Initialize data
 
 
-| Param | Type |
-| --- | --- |
-| init | <code>Object</code> | 
 
-<a name="CookieStore+cookie"></a>
+## [Methods]()
 
-### cookieStore.cookie
-Get cookie string
+<!-- _Methods._ -->
 
-**Kind**: instance property of [<code>CookieStore</code>](#CookieStore)  
-<a name="CookieStore+cookie"></a>
 
-### cookieStore.cookie
-Set/Parse cookie
+### CookieStore#delete()
 
-**Kind**: instance property of [<code>CookieStore</code>](#CookieStore)  
-<a name="CookieStore+delete"></a>
-
-### cookieStore.delete(name)
 Delete cookie by name
 
-**Kind**: instance method of [<code>CookieStore</code>](#CookieStore)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| name | <code>String</code> | 
+    delete(name)
 
-<a name="CookieStore+get"></a>
+##### [Parameters]()
 
-### cookieStore.get(name) ⇒ <code>Array</code>
+name|type|defaultvalue
+---|---|---
+name|`String`|
+
+##### [Return value]()
+
+
+### CookieStore#get()
+
 Get cookie by name
 
-**Kind**: instance method of [<code>CookieStore</code>](#CookieStore)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| name | <code>String</code> | 
+    get(name)
 
-<a name="CookieStore+getAll"></a>
+##### [Parameters]()
 
-### cookieStore.getAll(name) ⇒ <code>Array</code>
+name|type|defaultvalue
+---|---|---
+name|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### CookieStore#getAll()
+
 Get all cookie name
 
-**Kind**: instance method of [<code>CookieStore</code>](#CookieStore)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| name | <code>String</code> | 
+    getAll(name)
 
-<a name="CookieStore+set"></a>
+##### [Parameters]()
 
-### cookieStore.set(name, value)
+name|type|defaultvalue
+---|---|---
+name|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### CookieStore#set()
+
 Set cookie
 
-**Kind**: instance method of [<code>CookieStore</code>](#CookieStore)  
+#### [Syntax]()
 
-| Param | Type |
-| --- | --- |
-| name | <code>String</code> | 
-| value | <code>String</code> | 
+    set(name,value)
 
-<a name="Database"></a>
+##### [Parameters]()
 
-## Database
-**Kind**: global class  
+name|type|defaultvalue
+---|---|---
+name|`String`|
+value|`String`|
 
-* [Database](#Database)
-    * [new Database(file)](#new_Database_new)
-    * _instance_
-        * [.pools](#Database+pools)
-        * [.get(target, name)](#Database+get) ⇒ <code>Array</code>
-        * [.set(target, name, value)](#Database+set) ⇒ <code>Array</code>
-        * [.deleteProperty(target, name)](#Database+deleteProperty) ⇒ <code>Array</code>
-        * [.read(file, data)](#Database+read) ⇒ <code>Array</code>
-        * [.write(file, data)](#Database+write)
-    * _static_
-        * [.get(origin, options)](#Database.get) ⇒ <code>Array</code>
+##### [Return value]()
 
-<a name="new_Database_new"></a>
 
-### new Database(file)
+# pools
 
-| Param | Type |
-| --- | --- |
-| file | <code>String</code> | 
-
-<a name="Database+pools"></a>
-
-### database.pools
 Collection active running pool/database
 
-**Kind**: instance property of [<code>Database</code>](#Database)  
-<a name="Database+get"></a>
 
-### database.get(target, name) ⇒ <code>Array</code>
-**Kind**: instance method of [<code>Database</code>](#Database)  
 
-| Param | Type |
-| --- | --- |
-| target | <code>String</code> | 
-| name | <code>String</code> | 
+# get
 
-<a name="Database+set"></a>
 
-### database.set(target, name, value) ⇒ <code>Array</code>
-**Kind**: instance method of [<code>Database</code>](#Database)  
 
-| Param | Type |
-| --- | --- |
-| target | <code>String</code> | 
-| name | <code>String</code> | 
-| value | <code>String</code> | 
 
-<a name="Database+deleteProperty"></a>
 
-### database.deleteProperty(target, name) ⇒ <code>Array</code>
-**Kind**: instance method of [<code>Database</code>](#Database)  
+# Database
 
-| Param | Type |
-| --- | --- |
-| target | <code>String</code> | 
-| name | <code>String</code> | 
 
-<a name="Database+read"></a>
 
-### database.read(file, data) ⇒ <code>Array</code>
-**Kind**: instance method of [<code>Database</code>](#Database)  
 
-| Param | Type |
-| --- | --- |
-| file | <code>String</code> | 
-| data | <code>String</code> | 
 
-<a name="Database+write"></a>
+## [Methods]()
 
-### database.write(file, data)
-**Kind**: instance method of [<code>Database</code>](#Database)  
+<!-- _Methods._ -->
 
-| Param | Type |
-| --- | --- |
-| file | <code>String</code> | 
-| data | <code>String</code> | 
 
-<a name="Database.get"></a>
+### Database#get()
 
-### Database.get(origin, options) ⇒ <code>Array</code>
-**Kind**: static method of [<code>Database</code>](#Database)  
 
-| Param | Type |
-| --- | --- |
-| origin | <code>String</code> | 
-| options | <code>String</code> | 
+
+#### [Syntax]()
+
+    get(target,name)
+
+##### [Parameters]()
+
+name|type|defaultvalue
+---|---|---
+target|`String`|
+name|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### Database#set()
+
+
+
+#### [Syntax]()
+
+    set(target,name,value)
+
+##### [Parameters]()
+
+name|type|defaultvalue
+---|---|---
+target|`String`|
+name|`String`|
+value|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### Database#deleteProperty()
+
+
+
+#### [Syntax]()
+
+    deleteProperty(target,name)
+
+##### [Parameters]()
+
+name|type|defaultvalue
+---|---|---
+target|`String`|
+name|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### Database#read()
+
+
+
+#### [Syntax]()
+
+    read(file,data)
+
+##### [Parameters]()
+
+name|type|defaultvalue
+---|---|---
+file|`String`|
+data|`String`|
+
+##### [Return value]()
+
+`Array`
+
+### Database#write()
+
+
+
+#### [Syntax]()
+
+    write(file,data)
+
+##### [Parameters]()
+
+name|type|defaultvalue
+---|---|---
+file|`String`|
+data|`String`|
+
+##### [Return value]()
+
+
+# 
+
+
+
 
