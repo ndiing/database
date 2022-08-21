@@ -16,91 +16,91 @@
 <!-- _Methods._ -->
 
 
-### Storage#clear()
+## Storage#clear()
 
 Clear all data
 
-#### [Syntax]()
+### [Syntax]()
 
     clear()
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 
-##### [Return value]()
+#### [Return value]()
 
 
-### Storage#getItem()
+## Storage#getItem()
 
 Get item by name
 
-#### [Syntax]()
+### [Syntax]()
 
     getItem(name)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 name|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### Storage#key()
+## Storage#key()
 
 Get name by index
 
-#### [Syntax]()
+### [Syntax]()
 
     key(index)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 index|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### Storage#removeItem()
+## Storage#removeItem()
 
 Remove item by name
 
-#### [Syntax]()
+### [Syntax]()
 
     removeItem(name)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 name|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 
-### Storage#setItem()
+## Storage#setItem()
 
 Set item
 
-#### [Syntax]()
+### [Syntax]()
 
     setItem(name,value)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 name|`String`|
 value|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 
 # cookie
@@ -126,75 +126,75 @@ Initialize data
 <!-- _Methods._ -->
 
 
-### CookieStore#delete()
+## CookieStore#delete()
 
 Delete cookie by name
 
-#### [Syntax]()
+### [Syntax]()
 
     delete(name)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 name|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 
-### CookieStore#get()
+## CookieStore#get()
 
 Get cookie by name
 
-#### [Syntax]()
+### [Syntax]()
 
     get(name)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 name|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### CookieStore#getAll()
+## CookieStore#getAll()
 
 Get all cookie name
 
-#### [Syntax]()
+### [Syntax]()
 
     getAll(name)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 name|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### CookieStore#set()
+## CookieStore#set()
 
 Set cookie
 
-#### [Syntax]()
+### [Syntax]()
 
     set(name,value)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 name|`String`|
 value|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 
 # pools
@@ -220,34 +220,34 @@ Collection active running pool/database
 <!-- _Methods._ -->
 
 
-### Database#get()
+## Database#get()
 
 
 
-#### [Syntax]()
+### [Syntax]()
 
     get(target,name)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 target|`String`|
 name|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### Database#set()
+## Database#set()
 
 
 
-#### [Syntax]()
+### [Syntax]()
 
     set(target,name,value)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
@@ -255,64 +255,64 @@ target|`String`|
 name|`String`|
 value|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### Database#deleteProperty()
+## Database#deleteProperty()
 
 
 
-#### [Syntax]()
+### [Syntax]()
 
     deleteProperty(target,name)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 target|`String`|
 name|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### Database#read()
+## Database#read()
 
 
 
-#### [Syntax]()
+### [Syntax]()
 
     read(file,data)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 file|`String`|
 data|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 `Array`
 
-### Database#write()
+## Database#write()
 
 
 
-#### [Syntax]()
+### [Syntax]()
 
     write(file,data)
 
-##### [Parameters]()
+#### [Parameters]()
 
 name|type|defaultvalue
 ---|---|---
 file|`String`|
 data|`String`|
 
-##### [Return value]()
+#### [Return value]()
 
 
 # 
