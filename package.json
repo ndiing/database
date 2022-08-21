@@ -1,7 +1,7 @@
 {
   "name": "@ndiinginc/database",
   "version": "1.0.5",
-  "description": "nodejs json database",
+  "description": "Nodejs low level database",
   "main": "index.js",
   "scripts": {
     "test": "exit 0"
@@ -11,10 +11,7 @@
     "url": "git+https://github.com/ndiing/database.git"
   },
   "keywords": [
-    "nodejs",
     "json",
-    "file",
-    "database",
     "cookieStore",
     "localStorage"
   ],
