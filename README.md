@@ -1,62 +1,129 @@
 # Storage
 
-## [Properties]()
+<!-- Description -->
 
-[`Storage.length`]()
+
+
 
 ## [Methods]()
 
-[`Storage.clear()`]()
+<!-- _Description_ -->
 
-[`Storage.getItem()`]()
+[`clear()`]()
 
-[`Storage.key()`]()
+<!-- Description -->
+[`getItem()`]()
 
-[`Storage.removeItem()`]()
+<!-- Description -->
+[`key()`]()
 
-[`Storage.setItem()`]()
+<!-- Description -->
+[`removeItem()`]()
 
+<!-- Description -->
+[`setItem()`]()
+
+<!-- Description -->
+
+
+
+
+<!-- ## [Events]() -->
+<!--  -->
+<!-- Description -->
+<!--  -->
+<!-- [`eventName`]() event -->
+<!--  -->
+<!-- Description -->
+<!--  -->
+<!-- ## [Example]() -->
+<!--  -->
+<!-- ### [Title]() -->
+<!--  -->
+<!-- Description -->
 # CookieStore
 
-## [Properties]()
+<!-- Description -->
 
-[`CookieStore.cookie`]()
 
-[`CookieStore.cookie`]()
+
 
 ## [Methods]()
 
-[`CookieStore.delete()`]()
+<!-- _Description_ -->
 
-[`CookieStore.get()`]()
+[`delete()`]()
 
-[`CookieStore.getAll()`]()
+<!-- Description -->
+[`get()`]()
 
-[`CookieStore.set()`]()
+<!-- Description -->
+[`getAll()`]()
 
+<!-- Description -->
+[`set()`]()
+
+<!-- Description -->
+
+
+
+
+<!-- ## [Events]() -->
+<!--  -->
+<!-- Description -->
+<!--  -->
+<!-- [`eventName`]() event -->
+<!--  -->
+<!-- Description -->
+<!--  -->
+<!-- ## [Example]() -->
+<!--  -->
+<!-- ### [Title]() -->
+<!--  -->
+<!-- Description -->
 # Database
 
-## [Properties]()
+<!-- Description -->
 
-[`Database.pools`]()
+
+
 
 ## [Methods]()
 
-[`Database.get()`]()
+<!-- _Description_ -->
 
-[`Database.set()`]()
+[`get()`]()
 
-[`Database.deleteProperty()`]()
+<!-- Description -->
+[`set()`]()
 
-[`Database.read()`]()
+<!-- Description -->
+[`deleteProperty()`]()
 
-[`Database.write()`]()
+<!-- Description -->
+[`read()`]()
 
-## [Static methods]()
+<!-- Description -->
+[`write()`]()
 
-[`Database.get()`]()
+<!-- Description -->
 
-# Global
+
+
+
+<!-- ## [Events]() -->
+<!--  -->
+<!-- Description -->
+<!--  -->
+<!-- [`eventName`]() event -->
+<!--  -->
+<!-- Description -->
+<!--  -->
+<!-- ## [Example]() -->
+<!--  -->
+<!-- ### [Title]() -->
+<!--  -->
+<!-- Description -->
 
 ## [See also]()
 
