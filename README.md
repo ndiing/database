@@ -4,6 +4,18 @@
 
 [`Storage.length`]()
 
+## [Methods]()
+
+[`Storage.clear()`]()
+
+[`Storage.getItem()`]()
+
+[`Storage.key()`]()
+
+[`Storage.removeItem()`]()
+
+[`Storage.setItem()`]()
+
 # CookieStore
 
 ## [Properties]()
@@ -12,17 +24,39 @@
 
 [`CookieStore.cookie`]()
 
+## [Methods]()
+
+[`CookieStore.delete()`]()
+
+[`CookieStore.get()`]()
+
+[`CookieStore.getAll()`]()
+
+[`CookieStore.set()`]()
+
 # Database
 
 ## [Properties]()
 
 [`Database.pools`]()
 
-## [Static properties]()
+## [Methods]()
+
+[`Database.get()`]()
+
+[`Database.set()`]()
+
+[`Database.deleteProperty()`]()
+
+[`Database.read()`]()
+
+[`Database.write()`]()
+
+## [Static methods]()
+
+[`Database.get()`]()
 
 # Global
-
-## [Methods]()
 
 ## [See also]()
 
