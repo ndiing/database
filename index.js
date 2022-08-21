@@ -1,35 +1,59 @@
 const fs = require("fs");
 const path = require("path");
 
+/**
+ *
+ */
 class Storage {
+    /**
+     *
+     */
     get length() {
         return Object.getOwnPropertyNames(this).length;
     }
 
+    /**
+     *
+     */
     constructor(init = {}) {
         for (const name in init) {
             this.setItem(name, init[name]);
         }
     }
 
+    /**
+     *
+     */
     clear() {
         for (const name of Object.getOwnPropertyNames(this)) {
             this.removeItem(name);
         }
     }
 
+    /**
+     *
+     */
     getItem(name) {
         return this[name];
     }
 
+    /**
+     *
+     */
     key(index) {
         return Object.getOwnPropertyNames(this)[index];
     }
 
+    /**
+     *
+     */
     removeItem(name) {
         delete this[name];
     }
 
+    /**
+     *
+     */
     setItem(name, value) {
         this[name] = value;
     }
@@ -45,7 +69,13 @@ function cookie(name, value) {
     return object;
 }
 
+/**
+ *
+ */
 class CookieStore {
+    /**
+     *
+     */
     get cookie() {
         let array = [];
 
@@ -55,6 +85,9 @@ class CookieStore {
         return array.join("; ");
     }
 
+    /**
+     *
+     */
     set cookie(value) {
         const regexp = /(Expires|Max-Age|Domain|Path|Secure|HttpOnly|SameSite)/i;
 
@@ -88,36 +121,60 @@ class CookieStore {
         }
     }
 
+    /**
+     *
+     */
     constructor(init = {}) {
         for (const name in init) {
             this.set(init[name]);
         }
     }
 
+    /**
+     *
+     */
     delete(name) {
         let object = cookie(name);
         delete this[object.name];
     }
 
+    /**
+     *
+     */
     get(name) {
         let object = cookie(name);
         return this[object.name];
     }
 
+    /**
+     *
+     */
     getAll(name) {
         let object = cookie(name);
         return this[object.name];
     }
 
+    /**
+     *
+     */
     set(name, value) {
         let object = cookie(name, value);
         this[object.name] = object;
     }
 }
 
+/**
+ *
+ */
 class Database {
+    /**
+     *
+     */
     static pools = [];
 
+    /**
+     *
+     */
     static get(origin = "", options = {}) {
         const { userDataDir = "./data", profileDirectory = "default" } = options;
         origin = origin.replace(/[^\w\(\)\_\-\,\.]/g, "-");
@@ -146,6 +203,9 @@ class Database {
         return this.pools[file];
     }
 
+    /**
+     *
+     */
     constructor(file = "") {
         this.file = file;
         this.data = this.read(this.file, {});
@@ -156,11 +216,17 @@ class Database {
         return new Proxy(this.data, this);
     }
 
+    /**
+     *
+     */
     get(target, name) {
         if (typeof target[name] == "object" && target[name] !== null && !Array.isArray(target[name])) return new Proxy(target[name], this);
         return target[name];
     }
 
+    /**
+     *
+     */
     set(target, name, value) {
         const oldValue = target[name];
 
@@ -172,6 +238,9 @@ class Database {
         return true;
     }
 
+    /**
+     *
+     */
     deleteProperty(target, name) {
         const oldValue = target[name];
 
@@ -183,6 +252,9 @@ class Database {
         return true;
     }
 
+    /**
+     *
+     */
     read(file = "", data = {}) {
         try {
             data = JSON.parse(fs.readFileSync(file));
@@ -192,6 +264,9 @@ class Database {
         return data;
     }
 
+    /**
+     *
+     */
     write(file = "", data = {}) {
         const dir = path.dirname(file);
         try {

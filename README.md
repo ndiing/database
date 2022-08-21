@@ -1,306 +1,108 @@
 
-# length
-
-
-
-
-
 # Storage
 
 
+<!-- examples -->
+<!-- examples -->
+
+<!-- properties -->
+<!-- properties -->
+
+<!-- staticproperties -->
+<!-- staticproperties -->
+
+<!-- methods -->
+## Methods
 
 
-
-## [Methods]()
-
-<!-- _Methods._ -->
+[`Storage#clear()`](./docs/storage/clear.md)
 
 
-## Storage#clear()
-
-Clear all data
-
-### [Syntax]()
-
-    clear()
+[`Storage#getItem(name)`](./docs/storage/get-item.md)
 
 
-
-## Storage#getItem()
-
-Get item by name
-
-### [Syntax]()
-
-    getItem(name)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-name|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## Storage#key()
-
-Get name by index
-
-### [Syntax]()
-
-    key(index)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-index|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## Storage#removeItem()
-
-Remove item by name
-
-### [Syntax]()
-
-    removeItem(name)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-name|`String`|
+[`Storage#key(index)`](./docs/storage/key.md)
 
 
-## Storage#setItem()
-
-Set item
-
-### [Syntax]()
-
-    setItem(name,value)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-name|`String`|
-value|`String`|
+[`Storage#removeItem(name)`](./docs/storage/remove-item.md)
 
 
-# cookie
-
-Get cookie string
+[`Storage#setItem(name,value)`](./docs/storage/set-item.md)
 
 
+<!-- methods -->
 
-# cookie
-
-Set/Parse cookie
-
+<!-- staticmethods -->
+<!-- staticmethods -->
 
 
 # CookieStore
 
-Initialize data
+
+<!-- examples -->
+<!-- examples -->
+
+<!-- properties -->
+<!-- properties -->
+
+<!-- staticproperties -->
+<!-- staticproperties -->
+
+<!-- methods -->
+## Methods
 
 
-
-## [Methods]()
-
-<!-- _Methods._ -->
+[`CookieStore#delete(name)`](./docs/cookie-store/delete.md)
 
 
-## CookieStore#delete()
-
-Delete cookie by name
-
-### [Syntax]()
-
-    delete(name)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-name|`String`|
+[`CookieStore#get(name)`](./docs/cookie-store/get.md)
 
 
-## CookieStore#get()
-
-Get cookie by name
-
-### [Syntax]()
-
-    get(name)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-name|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## CookieStore#getAll()
-
-Get all cookie name
-
-### [Syntax]()
-
-    getAll(name)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-name|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## CookieStore#set()
-
-Set cookie
-
-### [Syntax]()
-
-    set(name,value)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-name|`String`|
-value|`String`|
+[`CookieStore#getAll(name)`](./docs/cookie-store/get-all.md)
 
 
-# pools
-
-Collection active running pool/database
+[`CookieStore#set(name,value)`](./docs/cookie-store/set.md)
 
 
+<!-- methods -->
 
-# get
-
-
-
+<!-- staticmethods -->
+<!-- staticmethods -->
 
 
 # Database
 
 
+<!-- examples -->
+<!-- examples -->
+
+<!-- properties -->
+<!-- properties -->
+
+<!-- staticproperties -->
+<!-- staticproperties -->
+
+<!-- methods -->
+## Methods
 
 
-
-## [Methods]()
-
-<!-- _Methods._ -->
+[`Database#get(target,name)`](./docs/database/get.md)
 
 
-## Database#get()
+[`Database#set(target,name,value)`](./docs/database/set.md)
 
 
-
-### [Syntax]()
-
-    get(target,name)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-target|`String`|
-name|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## Database#set()
+[`Database#deleteProperty(target,name)`](./docs/database/delete-property.md)
 
 
-
-### [Syntax]()
-
-    set(target,name,value)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-target|`String`|
-name|`String`|
-value|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## Database#deleteProperty()
+[`Database#read(file,data)`](./docs/database/read.md)
 
 
-
-### [Syntax]()
-
-    deleteProperty(target,name)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-target|`String`|
-name|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## Database#read()
+[`Database#write(file,data)`](./docs/database/write.md)
 
 
+<!-- methods -->
 
-### [Syntax]()
-
-    read(file,data)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-file|`String`|
-data|`String`|
-
-#### [Return value]()
-
-`Array`
-
-## Database#write()
-
-
-
-### [Syntax]()
-
-    write(file,data)
-
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-file|`String`|
-data|`String`|
-
-
-# 
-
-
-
+<!-- staticmethods -->
+<!-- staticmethods -->
 
