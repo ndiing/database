@@ -14,7 +14,6 @@ getAll(name);
 ### Parameters
 
 - `name`
-
 <!-- parameters -->
 
 <!-- return -->

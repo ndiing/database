@@ -14,7 +14,6 @@ getItem(name);
 ### Parameters
 
 - `name`
-
 <!-- parameters -->
 
 <!-- return -->

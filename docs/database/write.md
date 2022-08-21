@@ -14,9 +14,7 @@ write(file,data);
 ### Parameters
 
 - `file`
-
 - `data`
-
 <!-- parameters -->
 
 <!-- return -->

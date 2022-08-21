@@ -14,9 +14,7 @@ read(file,data);
 ### Parameters
 
 - `file`
-
 - `data`
-
 <!-- parameters -->
 
 <!-- return -->

@@ -14,9 +14,7 @@ deleteProperty(target,name);
 ### Parameters
 
 - `target`
-
 - `name`
-
 <!-- parameters -->
 
 <!-- return -->

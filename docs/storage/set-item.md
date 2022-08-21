@@ -14,9 +14,7 @@ setItem(name,value);
 ### Parameters
 
 - `name`
-
 - `value`
-
 <!-- parameters -->
 
 <!-- return -->

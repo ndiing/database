@@ -14,7 +14,6 @@ removeItem(name);
 ### Parameters
 
 - `name`
-
 <!-- parameters -->
 
 <!-- return -->

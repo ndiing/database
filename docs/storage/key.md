@@ -14,7 +14,6 @@ key(index);
 ### Parameters
 
 - `index`
-
 <!-- parameters -->
 
 <!-- return -->
