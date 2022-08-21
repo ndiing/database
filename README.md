@@ -24,12 +24,6 @@ Clear all data
 
     clear()
 
-#### [Parameters]()
-
-name|type|defaultvalue
----|---|---
-
-#### [Return value]()
 
 
 ## Storage#getItem()
@@ -82,8 +76,6 @@ name|type|defaultvalue
 ---|---|---
 name|`String`|
 
-#### [Return value]()
-
 
 ## Storage#setItem()
 
@@ -99,8 +91,6 @@ name|type|defaultvalue
 ---|---|---
 name|`String`|
 value|`String`|
-
-#### [Return value]()
 
 
 # cookie
@@ -139,8 +129,6 @@ Delete cookie by name
 name|type|defaultvalue
 ---|---|---
 name|`String`|
-
-#### [Return value]()
 
 
 ## CookieStore#get()
@@ -193,8 +181,6 @@ name|type|defaultvalue
 ---|---|---
 name|`String`|
 value|`String`|
-
-#### [Return value]()
 
 
 # pools
@@ -311,8 +297,6 @@ name|type|defaultvalue
 ---|---|---
 file|`String`|
 data|`String`|
-
-#### [Return value]()
 
 
 # 
