@@ -1,29 +1,29 @@
 # Storage
 
-<!-- Description -->
+Description
 
 
 
 
 ## [Methods]()
 
-<!-- _Description_ -->
+_Description_
 
-[`clear()`]()
+[`clear()`](./docs/clear.md)
 
-<!-- Description -->
-[`getItem()`]()
 
-<!-- Description -->
-[`key()`]()
+[`getItem()`](./docs/get-item.md)
 
-<!-- Description -->
-[`removeItem()`]()
 
-<!-- Description -->
-[`setItem()`]()
+[`key()`](./docs/key.md)
 
-<!-- Description -->
+
+[`removeItem()`](./docs/remove-item.md)
+
+
+[`setItem()`](./docs/set-item.md)
+
+
 
 
 
@@ -36,34 +36,36 @@
 <!--  -->
 <!-- Description -->
 <!--  -->
+
 <!-- ## [Example]() -->
 <!--  -->
 <!-- ### [Title]() -->
 <!--  -->
 <!-- Description -->
+
 # CookieStore
 
-<!-- Description -->
+Description
 
 
 
 
 ## [Methods]()
 
-<!-- _Description_ -->
+_Description_
 
-[`delete()`]()
+[`delete()`](./docs/delete.md)
 
-<!-- Description -->
-[`get()`]()
 
-<!-- Description -->
-[`getAll()`]()
+[`get()`](./docs/get.md)
 
-<!-- Description -->
-[`set()`]()
 
-<!-- Description -->
+[`getAll()`](./docs/get-all.md)
+
+
+[`set()`](./docs/set.md)
+
+
 
 
 
@@ -76,37 +78,39 @@
 <!--  -->
 <!-- Description -->
 <!--  -->
+
 <!-- ## [Example]() -->
 <!--  -->
 <!-- ### [Title]() -->
 <!--  -->
 <!-- Description -->
+
 # Database
 
-<!-- Description -->
+Description
 
 
 
 
 ## [Methods]()
 
-<!-- _Description_ -->
+_Description_
 
-[`get()`]()
+[`get()`](./docs/get.md)
 
-<!-- Description -->
-[`set()`]()
 
-<!-- Description -->
-[`deleteProperty()`]()
+[`set()`](./docs/set.md)
 
-<!-- Description -->
-[`read()`]()
 
-<!-- Description -->
-[`write()`]()
+[`deleteProperty()`](./docs/delete-property.md)
 
-<!-- Description -->
+
+[`read()`](./docs/read.md)
+
+
+[`write()`](./docs/write.md)
+
+
 
 
 
@@ -119,11 +123,13 @@
 <!--  -->
 <!-- Description -->
 <!--  -->
+
 <!-- ## [Example]() -->
 <!--  -->
 <!-- ### [Title]() -->
 <!--  -->
 <!-- Description -->
+
 
 ## [See also]()
 
