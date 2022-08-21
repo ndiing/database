@@ -2,19 +2,19 @@ const fs = require("fs");
 const path = require("path");
 
 /**
- * 
+ *
  */
 class Storage {
-
     /**
-    */
+     *
+     */
     get length() {
         return Object.getOwnPropertyNames(this).length;
     }
 
     /**
-     * 
-     * @param {*} init 
+     *
+     * @param {Object} init
      */
     constructor(init = {}) {
         for (const name in init) {
@@ -23,7 +23,7 @@ class Storage {
     }
 
     /**
-     * 
+     * Clear all data
      */
     clear() {
         for (const name of Object.getOwnPropertyNames(this)) {
@@ -32,35 +32,35 @@ class Storage {
     }
 
     /**
-     * 
-     * @param {*} name 
-     * @returns {Any} 
+     * Get item by name
+     * @param {String} name
+     * @returns {Array}
      */
     getItem(name) {
         return this[name];
     }
-    
+
     /**
-     * 
-     * @param {*} index 
-     * @returns {Any} 
+     * Get name by index
+     * @param {String} index
+     * @returns {Array}
      */
     key(index) {
         return Object.getOwnPropertyNames(this)[index];
     }
 
     /**
-     * 
-     * @param {*} name 
+     * Remove item by name
+     * @param {String} name
      */
     removeItem(name) {
         delete this[name];
     }
 
     /**
-     * 
-     * @param {*} name 
-     * @param {*} value 
+     * Set item
+     * @param {String} name
+     * @param {String} value
      */
     setItem(name, value) {
         this[name] = value;
@@ -83,13 +83,12 @@ function cookie(name, value) {
 }
 
 /**
- * 
+ *
  */
 class CookieStore {
-
     /**
-     * 
-    */
+     * Get cookie string
+     */
     get cookie() {
         let array = [];
 
@@ -100,8 +99,8 @@ class CookieStore {
     }
 
     /**
-     * 
-    */
+     * Set/Parse cookie
+     */
     set cookie(value) {
         const regexp = /(Expires|Max-Age|Domain|Path|Secure|HttpOnly|SameSite)/i;
 
@@ -137,8 +136,8 @@ class CookieStore {
     }
 
     /**
-     * 
-     * @param {*} init 
+     * Initialize data
+     * @param {Object} init
      */
     constructor(init = {}) {
         for (const name in init) {
@@ -148,8 +147,8 @@ class CookieStore {
     }
 
     /**
-     * 
-     * @param {*} name 
+     * Delete cookie by name
+     * @param {String} name
      */
     delete(name) {
         let object = cookie(name);
@@ -157,9 +156,9 @@ class CookieStore {
     }
 
     /**
-     * 
-     * @param {*} name 
-     * @returns {Any}
+     * Get cookie by name
+     * @param {String} name
+     * @returns {Array}
      */
     get(name) {
         let object = cookie(name);
@@ -167,9 +166,9 @@ class CookieStore {
     }
 
     /**
-     * 
-     * @param {*} name 
-     * @returns {Any}
+     * Get all cookie name
+     * @param {String} name
+     * @returns {Array}
      */
     getAll(name) {
         let object = cookie(name);
@@ -177,9 +176,9 @@ class CookieStore {
     }
 
     /**
-     * 
-     * @param {*} name 
-     * @param {*} value 
+     * Set cookie 
+     * @param {String} name
+     * @param {String} value
      */
     set(name, value) {
         let object = cookie(name, value);
@@ -188,19 +187,19 @@ class CookieStore {
 }
 
 /**
- * 
+ *
  */
 class Database {
     /**
-     * 
-    */
+     * Collection active running pool/database
+     */
     static pools = [];
 
     /**
-     * 
-     * @param {*} origin 
-     * @param {*} options 
-     * @returns {Any}
+     *
+     * @param {String} origin
+     * @param {String} options
+     * @returns {Array}
      */
     static get(origin = "", options = {}) {
         const { userDataDir = "./data", profileDirectory = "default" } = options;
@@ -231,29 +230,26 @@ class Database {
     }
 
     /**
-     * 
-     * @param {*} file 
-     * @returns {Any}
+     *
+     * @param {String} file
+     * @returns {Array}
      */
     constructor(file = "") {
         this.file = file;
         this.data = this.read(this.file, {});
-        this.data={
+        this.data = {
             // watch
             localStorage: new Storage(this.data?.localStorage ?? {}),
             cookieStore: new CookieStore(this.data?.cookieStore ?? {}),
-        }
-        return new Proxy(
-            this.data,
-            this
-        );
+        };
+        return new Proxy(this.data, this);
     }
 
     /**
-     * 
-     * @param {*} target 
-     * @param {*} name 
-     * @returns {Any}
+     *
+     * @param {String} target
+     * @param {String} name
+     * @returns {Array}
      */
     get(target, name) {
         if (typeof target[name] == "object" && target[name] !== null && !Array.isArray(target[name])) return new Proxy(target[name], this);
@@ -261,11 +257,11 @@ class Database {
     }
 
     /**
-     * 
-     * @param {*} target 
-     * @param {*} name 
-     * @param {*} value 
-     * @returns {Any}
+     *
+     * @param {String} target
+     * @param {String} name
+     * @param {String} value
+     * @returns {Array}
      */
     set(target, name, value) {
         const oldValue = target[name];
@@ -279,10 +275,10 @@ class Database {
     }
 
     /**
-     * 
-     * @param {*} target 
-     * @param {*} name 
-     * @returns {Any}
+     *
+     * @param {String} target
+     * @param {String} name
+     * @returns {Array}
      */
     deleteProperty(target, name) {
         const oldValue = target[name];
@@ -296,10 +292,10 @@ class Database {
     }
 
     /**
-     * 
-     * @param {*} file 
-     * @param {*} data 
-     * @returns {Any}
+     *
+     * @param {String} file
+     * @param {String} data
+     * @returns {Array}
      */
     read(file = "", data = {}) {
         try {
@@ -311,9 +307,9 @@ class Database {
     }
 
     /**
-     * 
-     * @param {*} file 
-     * @param {*} data 
+     *
+     * @param {String} file
+     * @param {String} data
      */
     write(file = "", data = {}) {
         const dir = path.dirname(file);
