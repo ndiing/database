@@ -11,6 +11,12 @@ write(file,data);
 ```
 
 <!-- parameters -->
+### Parameters
+
+- `file`
+
+- `data`
+
 <!-- parameters -->
 
 <!-- return -->

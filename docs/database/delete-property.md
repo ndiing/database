@@ -11,6 +11,12 @@ deleteProperty(target,name);
 ```
 
 <!-- parameters -->
+### Parameters
+
+- `target`
+
+- `name`
+
 <!-- parameters -->
 
 <!-- return -->

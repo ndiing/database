@@ -11,6 +11,10 @@ getAll(name);
 ```
 
 <!-- parameters -->
+### Parameters
+
+- `name`
+
 <!-- parameters -->
 
 <!-- return -->
