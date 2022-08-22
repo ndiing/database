@@ -4,7 +4,7 @@
 npm install @ndiinginc/database
 ```
 
-## length
+## Global
 
 <!-- properties -->
 <!-- properties -->
@@ -49,38 +49,6 @@ npm install @ndiinginc/database
 
 <!-- examples -->
 <!-- examples -->
-## cookie
-
-<!-- properties -->
-<!-- properties -->
-
-<!-- staticproperties -->
-<!-- staticproperties -->
-
-<!-- methods -->
-<!-- methods -->
-
-<!-- staticmethods -->
-<!-- staticmethods -->
-
-<!-- examples -->
-<!-- examples -->
-## cookie
-
-<!-- properties -->
-<!-- properties -->
-
-<!-- staticproperties -->
-<!-- staticproperties -->
-
-<!-- methods -->
-<!-- methods -->
-
-<!-- staticmethods -->
-<!-- staticmethods -->
-
-<!-- examples -->
-<!-- examples -->
 ## CookieStore
 
 <!-- properties -->
@@ -101,38 +69,6 @@ npm install @ndiinginc/database
     <dt><code><a href="./docs/cookie-store/set.md">CookieStore#set()</a></code></dt>
     <dd></dd>
 </dl>
-<!-- methods -->
-
-<!-- staticmethods -->
-<!-- staticmethods -->
-
-<!-- examples -->
-<!-- examples -->
-## pools
-
-<!-- properties -->
-<!-- properties -->
-
-<!-- staticproperties -->
-<!-- staticproperties -->
-
-<!-- methods -->
-<!-- methods -->
-
-<!-- staticmethods -->
-<!-- staticmethods -->
-
-<!-- examples -->
-<!-- examples -->
-## get
-
-<!-- properties -->
-<!-- properties -->
-
-<!-- staticproperties -->
-<!-- staticproperties -->
-
-<!-- methods -->
 <!-- methods -->
 
 <!-- staticmethods -->
