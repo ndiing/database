@@ -1,22 +1,21 @@
-# Database#set()
+## Database#set()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-set(target,name,value);
+### Syntax
+```
+set(target,name,value)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>target</code></dt>
+    <dt><code>name</code></dt>
+    <dt><code>value</code></dt>
+</dl>
 
-- `target`
-- `name`
-- `value`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

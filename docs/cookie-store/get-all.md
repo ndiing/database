@@ -1,20 +1,19 @@
-# CookieStore#getAll()
+## CookieStore#getAll()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-getAll(name);
+### Syntax
+```
+getAll(name)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>name</code></dt>
+</dl>
 
-- `name`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

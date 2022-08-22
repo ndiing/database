@@ -1,21 +1,20 @@
-# Storage#setItem()
+## Storage#setItem()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-setItem(name,value);
+### Syntax
+```
+setItem(name,value)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>name</code></dt>
+    <dt><code>value</code></dt>
+</dl>
 
-- `name`
-- `value`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

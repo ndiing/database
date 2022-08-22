@@ -1,21 +1,20 @@
-# Database#write()
+## Database#write()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-write(file,data);
+### Syntax
+```
+write(file,data)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>file</code></dt>
+    <dt><code>data</code></dt>
+</dl>
 
-- `file`
-- `data`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

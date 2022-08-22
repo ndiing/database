@@ -1,20 +1,19 @@
-# Storage#key()
+## Storage#key()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-key(index);
+### Syntax
+```
+key(index)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>index</code></dt>
+</dl>
 
-- `index`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

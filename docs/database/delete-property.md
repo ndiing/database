@@ -1,21 +1,20 @@
-# Database#deleteProperty()
+## Database#deleteProperty()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-deleteProperty(target,name);
+### Syntax
+```
+deleteProperty(target,name)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>target</code></dt>
+    <dt><code>name</code></dt>
+</dl>
 
-- `target`
-- `name`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

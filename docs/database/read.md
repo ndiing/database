@@ -1,21 +1,20 @@
-# Database#read()
+## Database#read()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-read(file,data);
+### Syntax
+```
+read(file,data)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>file</code></dt>
+    <dt><code>data</code></dt>
+</dl>
 
-- `file`
-- `data`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

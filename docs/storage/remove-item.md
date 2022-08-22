@@ -1,20 +1,19 @@
-# Storage#removeItem()
+## Storage#removeItem()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-removeItem(name);
+### Syntax
+```
+removeItem(name)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>name</code></dt>
+</dl>
 
-- `name`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+

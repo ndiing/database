@@ -1,21 +1,20 @@
-# Database#get()
+## Database#get()
 
-
-<!-- examples -->
-<!-- examples -->
-
-## Syntax
-
-```js
-get(target,name);
+### Syntax
+```
+get(target,name)
 ```
 
-<!-- parameters -->
 ### Parameters
+<dl>
+    <dt><code>target</code></dt>
+    <dt><code>name</code></dt>
+</dl>
 
-- `target`
-- `name`
-<!-- parameters -->
+### Return value
 
-<!-- return -->
-<!-- return -->
+<dl>
+    <dt>None <code>undefined</code></dt>
+</dl>
+
+
