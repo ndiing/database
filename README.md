@@ -6,6 +6,9 @@ npm install @ndiinginc/database
 
 ## Global
 
+<!-- constructor -->
+<!-- constructor -->
+
 <!-- properties -->
 <!-- properties -->
 
@@ -21,6 +24,14 @@ npm install @ndiinginc/database
 <!-- examples -->
 <!-- examples -->
 ## Storage
+
+<!-- constructor -->
+### Constructor
+<dl>
+    <dt><code><a href="./docs//storage.md">Storage()</a></code></dt>
+    <dd></dd>
+</dl>
+<!-- constructor -->
 
 <!-- properties -->
 <!-- properties -->
@@ -51,6 +62,14 @@ npm install @ndiinginc/database
 <!-- examples -->
 ## CookieStore
 
+<!-- constructor -->
+### Constructor
+<dl>
+    <dt><code><a href="./docs//cookie-store.md">CookieStore()</a></code></dt>
+    <dd></dd>
+</dl>
+<!-- constructor -->
+
 <!-- properties -->
 <!-- properties -->
 
@@ -77,6 +96,14 @@ npm install @ndiinginc/database
 <!-- examples -->
 <!-- examples -->
 ## Database
+
+<!-- constructor -->
+### Constructor
+<dl>
+    <dt><code><a href="./docs//database.md">Database()</a></code></dt>
+    <dd></dd>
+</dl>
+<!-- constructor -->
 
 <!-- properties -->
 <!-- properties -->
