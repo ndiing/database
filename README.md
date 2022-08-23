@@ -4,6 +4,10 @@
 npm install @ndiinginc/database
 ```
 
+
+<!-- examples -->
+<!-- examples -->
+
 ## Storage
 
 <!-- constructor -->
@@ -41,6 +45,7 @@ npm install @ndiinginc/database
 
 <!-- examples -->
 <!-- examples -->
+
 ## CookieStore
 
 <!-- constructor -->
@@ -76,6 +81,7 @@ npm install @ndiinginc/database
 
 <!-- examples -->
 <!-- examples -->
+
 ## Database
 
 <!-- constructor -->
@@ -110,6 +116,3 @@ npm install @ndiinginc/database
 
 <!-- staticmethods -->
 <!-- staticmethods -->
-
-<!-- examples -->
-<!-- examples -->
