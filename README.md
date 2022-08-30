@@ -64,6 +64,9 @@ npm install @ndiinginc/database
 # Storage
 
 
+<!-- constructor -->
+<!-- constructor -->
+
 <!-- properties -->
 <!-- properties -->
 <!-- staticproperties -->
@@ -98,6 +101,9 @@ npm install @ndiinginc/database
 # CookieStore
 
 
+<!-- constructor -->
+<!-- constructor -->
+
 <!-- properties -->
 <!-- properties -->
 <!-- staticproperties -->
@@ -128,6 +134,9 @@ npm install @ndiinginc/database
 
 # Database
 
+
+<!-- constructor -->
+<!-- constructor -->
 
 <!-- properties -->
 <!-- properties -->
